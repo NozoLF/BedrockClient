@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.21)
+project(BedrockWorkbench LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 20)
+add_executable(BedrockWorkbench WIN32 src/main.cpp)
+target_compile_definitions(BedrockWorkbench PRIVATE UNICODE _UNICODE)
+target_link_libraries(BedrockWorkbench PRIVATE user32 gdi32)
